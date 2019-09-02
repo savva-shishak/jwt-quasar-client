@@ -1,0 +1,47 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "Savva Shishak <sav.shishak@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "ava --serial",
+    "start": "quasar dev"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "js-cookie": "^2.2.1",
+    "quasar": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@quasar/app": "^1.0.0",
+    "ava": "^2.3.0",
+    "axios-mock-adapter": "^1.17.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ],
+  "ava": {
+    "files": [
+      "./src/store/jwt/tests/*.test.js"
+    ],
+    "verbose": true,
+    "require": [
+      "@babel/register",
+      "@babel/polyfill"
+    ]
+  }
+}
